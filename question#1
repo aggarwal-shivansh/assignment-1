@@ -1,0 +1,6 @@
+#include<iostream>
+using nbamespace std
+void main()
+{
+cout<<"hello world";
+}
