@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Filling Random Color In Circle</title>
+        <style type="text/css">
+        #circle{
+            width: 500px;
+            height: 500px;
+            border-color: black;
+            background-color: #ABCDEF;
+            border-radius: 50%;
+            border-style:ridge;
+        }
+        button{
+            background-color: rgb(110, 193, 231);
+            font-size: 2pc;
+        }
+            </style>
+    </head>>
+    <body>
+        <div id="circle">
+        </div>
+        <button id="btn">Change Color</button>
+        <script type="text/javascript">
+        function randomcolorcircle(){
+            colors = "123456789ABCDEF";
+            color = '#';
+
+            for(var i=0;i<6;i++){
+                random = Math.ceil(Math.random()*14);
+                color = color + colors[random];
+            }
+            console.log(color)
+           return color;
+        }
+        circle = document.getElementById('circle');
+        button = document.getElementById('btn');
+        button.onclick = function(){
+            color = randomcolorcircle();
+            circle.style.backgroundColor = color;
+        }</script>
+    </body>
+</html>>

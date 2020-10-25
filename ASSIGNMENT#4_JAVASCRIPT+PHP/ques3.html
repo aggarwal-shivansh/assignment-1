@@ -1,0 +1,25 @@
+<html>
+    <head>
+    <title>GCD of two numbers</title>
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+        let num1 = Number(prompt('Enter the first number '));
+        let num2 = Number(prompt('Enter the second number '));
+        function gcd_two_numbers(x, y) {
+            if ((typeof x !== 'number') || (typeof y !== 'number')) 
+              return false;
+            x = Math.abs(x);
+            y = Math.abs(y);
+            while(y) {
+              var t = y;
+              y = x % y;
+              x = t;
+            }
+            return x;
+          }
+          alert("THE GCD IS :"+gcd_two_numbers(num1, num2));
+        </script>
+  </body>
+    </html>
